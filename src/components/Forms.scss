@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    height: 50vh;
+    justify-content: space-around;
+    .form-grp {
+        position: relative;
+        input,
+        textarea {
+            width: 100%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #000;
+            padding: 0.5rem 0;
+        }
+        input:focus + label,
+        input:valid + label,
+        textarea:focus + label,
+        textarea:valid + label {
+            transform: translateY(-75%);
+            transition: 0.5s ease;
+
+            color: #fb8500;
+        }
+        input:focus,
+        input:valid,
+        textarea:focus,
+        textarea:valid {
+            border-bottom: 1px solid #fb8500;
+        }
+        label {
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            opacity: 0.9;
+            padding: 0.5rem 0;
+        }
+    }
+    input[type="submit"] {
+        background: #fb8500;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
