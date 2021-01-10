@@ -8,12 +8,14 @@ html {
   font-size: 16px;
 }
 body {
-  display: grid;
-  place-items: center;
+  // display: grid;
+  // place-items: center;
   height: 100vh;
   overflow: hidden;
 }
-
+.container {
+  margin: 0 10vw;
+}
 // a {
 //   text-decoration: none;
 //   margin: 0.25rem 0.2rem;

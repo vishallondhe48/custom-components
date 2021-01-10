@@ -1,50 +1,91 @@
-form {
+.contact {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    height: 50vh;
+    flex-wrap: wrap;
     justify-content: space-around;
-    .form-grp {
-        position: relative;
-        input,
-        textarea {
-            width: 100%;
-            outline: none;
-            border: none;
-            border-bottom: 1px solid #000;
-            padding: 0.5rem 0;
-        }
-        input:focus + label,
-        input:valid + label,
-        textarea:focus + label,
-        textarea:valid + label {
-            transform: translateY(-75%);
-            transition: 0.5s ease;
-
-            color: #fb8500;
-        }
-        input:focus,
-        input:valid,
-        textarea:focus,
-        textarea:valid {
-            border-bottom: 1px solid #fb8500;
-        }
-        label {
-            position: absolute;
-            pointer-events: none;
-            left: 0;
-            top: 0;
-            opacity: 0.9;
-            padding: 0.5rem 0;
+    align-items: center;
+    height: 100vh;
+    .box {
+        flex: 1 1;
+    }
+    .text {
+        h2 {
+            font-size: 64px;
         }
     }
-    input[type="submit"] {
-        background: #fb8500;
-        color: #fff;
-        border: none;
-        outline: none;
-        font-size: 1rem;
-        padding: 1rem;
+    .contact-form {
+        width: 100%;
+
+        form {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+            height: 100vh;
+            background: 100%;
+
+            // background: #324376;
+            .form-grp {
+                width: 100%;
+                position: relative;
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                textarea:-webkit-autofill,
+                textarea:-webkit-autofill:hover,
+                textarea:-webkit-autofill:focus {
+                    -webkit-text-fill-color: #000;
+                    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+                input,
+                textarea {
+                    background-color: transparent;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    padding: 0.5rem 0;
+                }
+                input:focus + label,
+                input:valid + label,
+                textarea:focus + label,
+                textarea:valid + label {
+                    transform: translateY(-75%);
+                    transition: 0.5s ease;
+
+                    color: #fb8500;
+                }
+                input:focus,
+                input:valid,
+                textarea:focus,
+                textarea:valid {
+                    border-bottom: 1px solid #fb8500;
+                }
+                label {
+                    position: absolute;
+                    pointer-events: none;
+                    left: 0;
+                    top: 0;
+                    opacity: 0.9;
+                    padding: 0.5rem 0;
+                }
+            }
+            button {
+                display: inline-block;
+                flex-grow: 0;
+                text-transform: uppercase;
+                font-weight: 400;
+                border-radius: 16px;
+                background: #f2542d;
+                outline: none;
+                border: none;
+                color: #fff;
+                height: 28px;
+                max-width: 120px;
+                min-width: 50px;
+                padding: 0 16px;
+            }
+        }
     }
 }
